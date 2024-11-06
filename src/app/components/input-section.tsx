@@ -6,16 +6,18 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Loader2 } from "lucide-react";
-import { getYoutubeLink } from "../utils/downloader";
+import { getAPIResponse } from "../utils/downloader";
+import { PLATFORM_LIST } from "../types";
 
 export default function InputSection() {
-  const [platform, setPlatform] = useState("youtube");
+  const [platform, setPlatform] = useState<PLATFORM_LIST>("youtube");
   const [loading, setLoading] = useState(false);
   const [url, setUrl] = useState("");
 
   const handleDownload = async () => {
     setLoading(true);
-    getYoutubeLink({ url });
+    const response = await getAPIResponse({ url, platform });
+    console.log(response);
     setLoading(false);
   };
 

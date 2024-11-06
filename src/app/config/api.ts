@@ -4,5 +4,13 @@ const SPOTIFY_API = `${BASE_API}/spotify?url=`;
 const FACEBOOK_API = `${BASE_API}/fbdl?url=`;
 const TIKTOK_API = `${BASE_API}/tiktok?url=`;
 const TWITTER_API = `${BASE_API}/twitter?url=`;
+const INSTAGRAM_API = `${BASE_API}/igdl?url=`;
 
-export { YOUTUBE_API, SPOTIFY_API, FACEBOOK_API, TIKTOK_API, TWITTER_API };
+export {
+  YOUTUBE_API,
+  SPOTIFY_API,
+  FACEBOOK_API,
+  TIKTOK_API,
+  TWITTER_API,
+  INSTAGRAM_API,
+};
