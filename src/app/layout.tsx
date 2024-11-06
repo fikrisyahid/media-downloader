@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "FS Video Downloader",
-  description: "Download videos from popular websites",
+  title: "Online Media Downloader",
+  description: "Download media from popular websites",
 };
 
 export default function RootLayout({
