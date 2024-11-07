@@ -26,9 +26,13 @@ async function getAPIResponse({
   url: string;
   platform: PLATFORM_LIST;
 }) {
-  const response = await fetch(`${platform_api[platform]}${url}`);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(`${platform_api[platform]}${url}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    return error;
+  }
 }
 
 export { getAPIResponse };
